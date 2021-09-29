@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/nzzCoding/flashy-RPS-game)
-- Live Site URL: [The game](https://your-live-site-url.com)
+- Live Site URL: [The game](https://nzz-rps-game.netlify.app)
 
 ## My process
 
