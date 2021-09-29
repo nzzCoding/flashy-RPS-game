@@ -109,7 +109,7 @@
             </div>
             <div class="board">
                 <div class="selection-step">
-                    <svg viewBox="0 0 115 115" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <svg id="selection-wheel" viewBox="0 0 115 115" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <use href="#pentagon-path" x="20.15" y="18.43">
                         </use>
                         <a class="interactive-token">
@@ -145,7 +145,8 @@
                             <h2>YOU PICKED</h2>
                         </div>
                         <div class= "side-body player">
-                            <svg viewBox="0 0 56.885 56.885"  version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
+                            <svg id="player-pick" class="token-pick" viewBox="0 0 56.885 56.885"  version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            </svg>
                         </div>
                     </div>
                     <div class="round-result" style="display: none;">
@@ -157,7 +158,8 @@
                             <h2>THE HOUSE PICKED</h2>
                         </div>
                         <div class="side-body house">
-                            <svg viewBox="0 0 56.885 56.885"></svg>
+                            <svg id="house-pick" class="token-pick" viewBox="0 0 56.885 56.885">
+                            </svg>
                         </div>  
                     </div>
                 </div>

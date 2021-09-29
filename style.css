@@ -166,20 +166,21 @@ body, input, button {
 
 
 */
-@media only screen and (max-width: 979px) {
+@media only screen and (min-width: 280px) and (max-width: 480px) {
     :root {
         cursor: pointer;
     }
     .app-container {
         height: 100%;
         display: grid;
-        grid-template-rows: repeat(32, minmax(8px, 1fr));
+        grid-template-rows: repeat(20, minmax(8px, 1fr));
         grid-template-columns: repeat(20, minmax(8px, 1fr));
     }
     .prompter {
         grid-row: 2 / 7;
         grid-column: 3 / 19;
 
+        min-width: 200px;
         max-height: 100px;
 
         padding: 10px;
@@ -208,40 +209,47 @@ body, input, button {
         font-size: 2.5em;
     }
     .board {
-        grid-row: 9 / 25;
+        grid-row: 6 / 18;
         grid-column: 3 / 19;
     }
     .selection-step {
+        max-width: 100%;
+        max-height: 100%;
         display: grid;
-        grid-template-rows: repeat(16, minmax(15px, 27px));
-        grid-template-columns: repeat(12, minmax(20px, 1fr));
+        grid-template-rows: repeat(13, minmax(8px, 1fr));
+        grid-template-columns: repeat(16, minmax(8px, 1fr));
+        justify-content: center;
     }
     .selection-step svg {
-        grid-row: 1 / 7;
-        grid-column: 1 / 13;
+        grid-row: 1 / 11;
+        grid-column: 1 / 18;
     }
     .results-step {
+        max-width: 100%;
+        max-height: 100%;
         display: grid;
-        grid-template-rows: repeat(16, minmax(15px, 27px));
-        grid-template-columns: repeat(12, minmax(20px, 1fr));
+        grid-template-rows: repeat(13, minmax(8px, 1fr));
+        grid-template-columns: repeat(16, minmax(8px, 1fr));
     }
     .board-side {
         grid-row: 1 / 9;
         display: grid;
-        grid-template-rows: repeat(8, minmax(15px, 27px));
-        grid-template-columns: repeat(6, minmax(20px, 1fr));
+        grid-template-rows: repeat(8, minmax(8px, 1fr));
+        grid-template-columns: repeat(6, minmax(8px, 1fr));
+        justify-content: center;
     }
     .board-side.player {
-        grid-column: 1 / 7;
+        grid-column: 1 / 9;
     }
     .board-side.house {
-        grid-column: 7 / 13; 
+        grid-column: 9 / 17; 
     }
     .side-head {
         font-size: 0.6em;
-        grid-row: 7 / 9;
+        grid-row: 7;
         grid-column: 1 / 7;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(6);
         justify-content: center;
     }
     .side-body {
@@ -252,14 +260,13 @@ body, input, button {
         transform: scale(1.5);
     }
     .round-result {
-        grid-row: 10 / 15;
-        grid-column: 5 / 9;
+        grid-row: 9 / 14;
+        grid-column: 4 / 14;
     }
     .rules {
-        grid-row: 29 / 31;
-        grid-column: 7 / 16;
-        display: flex;
-        justify-content: center;
+        grid-row: 18;
+        grid-column: 8 / 15;
+        justify-self: center;
     }
     #rules-open-btn {
         width: 130px;
@@ -315,6 +322,169 @@ body, input, button {
 
 
 
+*/
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+    .app-container {
+        display: grid;
+        grid-template-rows: repeat(20, minmax(8px, 1fr));
+        grid-template-columns: repeat(32, minmax(4px, 1fr));
+    }
+    .prompter {
+        grid-row: 2 / 6;
+        grid-column: 4 / 30;
+
+        min-width: 200px;
+        max-height: 100px;
+
+        padding: 10px;
+
+        border-radius: 7px;
+
+        display: flex;/*shared*/
+        justify-content: space-between/*shared*/
+    }
+    .title-container {
+        padding: 10px;
+    }
+    .title-container img {
+        max-height: 3.75em;
+    }
+    .score {
+        min-width: 82px;
+        min-height: 75px;   
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .score-head {
+        font-size: 0.75em;
+    }
+    .score-content {
+        font-size: 2.5em;
+    }
+    .board {
+        grid-row: 6 / 19;
+        grid-column: 2 / 32;
+        display: flex;
+        justify-content: center;
+    }
+    .selection-step svg{
+        width: 500px;
+        height: 500px;
+    }
+    .results-step {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-rows: repeat(13, minmax(8px, 1fr));
+        grid-template-columns: repeat(16, minmax(8px, 1fr));
+    }
+    .board-side {
+        grid-row: 1 / 10;
+        display: grid;
+        grid-template-rows: repeat(8, minmax(8px, 1fr));
+        grid-template-columns: repeat(6, minmax(8px, 1fr));
+        justify-content: center;
+    }
+    .board-side.player {
+        grid-column: 1 / 9;
+    }
+    .board-side.house {
+        grid-column: 9 / 17; 
+    }
+    .side-head {
+        font-size: 0.6em;
+        grid-row: 1;
+        grid-column: 1 / 7;
+        display: grid;
+        grid-template-columns: repeat(6);
+        justify-content: center;
+    }
+    .side-body {
+        grid-row: 1 / 7;
+        grid-column: 1 / 7;
+    }
+    .side-body svg {
+        pointer-events: none;
+        transform: scale(1.2);
+    }
+    .round-result {
+        grid-row: 10 / 14;
+        grid-column: 4 / 14;
+    }
+    .rules {
+        grid-row: 19 / 21;
+        grid-column: 2 / 5;
+        
+    }
+    #rules-open-btn {
+        width: 130px;
+    }
+    .displayed-rules {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .rules-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        opacity: 0.5;
+        z-index: 2;
+    }
+    .rules-foreground {
+        min-width: 400px;
+        min-height: 445px;
+        display: grid;
+        grid-template-rows: repeat(9, 49px);
+        grid-template-columns: repeat(5, 80px);
+        padding: 30px;
+        border-radius: 7px;
+        opacity: 1;
+        z-index: 3;
+    }
+    #rules-title {
+        grid-row: 1;
+        grid-column: 1 / 3;
+    }
+    #rules-exit-btn {
+        grid-row: 1;
+        grid-column: 5;
+    }
+    #rules-img {
+        grid-row: 2 / 10;
+        grid-column: 1 / 6;
+        justify-self: center;
+    } 
+}
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -326,16 +496,17 @@ body, input, button {
 
 
 */
-@media only screen and (min-width: 980px) {
+@media only screen and (min-width: 1024px) {
     .app-container {
         min-height: 740px;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-rows: repeat(20, minmax(8px, 1fr));
+        grid-template-columns: repeat(32, minmax(8px, 1fr));
     }
     .prompter {
+        grid-row: 2 / 6;
+        grid-column: 4 / 30;
         min-height: 155px;
         min-width: 706px;
 
@@ -356,6 +527,12 @@ body, input, button {
     }
     .score-content {
         font-size: 4em;
+    }
+    .board {
+        grid-row: 7 / 20;
+        grid-column: 2 / 32;
+        display: flex;
+        justify-content: center;
     }
     .selection-step svg{
         width: 520px;
@@ -407,6 +584,7 @@ body, input, button {
         transform: scale(5.5);
         grid-row: 4;
         grid-column: 3;
+        pointer-events: none;
     }
     .round-result {
         min-width: 221px;
@@ -414,9 +592,8 @@ body, input, button {
         grid-column: 7 / 12;
     }
     .rules {
-        position: fixed;
-        bottom: 30px;
-        right: 26px;
+        grid-row: 19 / 21;
+        grid-column: 28 / 32;
     }
     #rules-open-btn {
         min-width: 143px;
