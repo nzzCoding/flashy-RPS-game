@@ -13,8 +13,8 @@ let selectTriggerInterval = 100;//interval in ms
 let scoreNode = document.querySelector(".score-content");//node displaying the score
 let resultsBoard = document.querySelector(".results-step")
 let resultNode = document.querySelector(".round-result h1");//node displaying result at end of round
-let playerSide = document.querySelector(".side-body.player svg");//svg that will be populated dynamically, represents the player choice
-let houseSide = document.querySelector(".side-body.house svg");//same as above but for house side
+let playerSide = document.querySelector("#player-pick");//svg that will be populated dynamically, represents the player choice
+let houseSide = document.querySelector("#house-pick");//same as above but for house side
 
 scoreNode.textContent = score;//at refresh set score from session storage
 
